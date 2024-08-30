@@ -72,10 +72,10 @@ $ docker ps
 ```
 Kết quả trả về
 ```
-ONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                  NAMES
-a63dee74d79e        react-java-mysql-backend    "java -Djava.securit…"   39 seconds ago      Up 37 seconds                              react-java-mysql_backend-1
-6a7364c0812e        react-java-mysql-frontend   "docker-entrypoint.s…"   39 seconds ago      Up 33 seconds       0.0.0.0:3000->3000/tcp react-java-mysql_frontend-1
-b176b18fbec4        mysql:8.0.19                "docker-entrypoint.s…"   39 seconds ago      Up 37 seconds       3306/tcp, 33060/tcp    react-java-mysql_db-1
+CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                                NAMES
+a63dee74d79e        swp-template-backend      "java -cp app:app/li…"   39 seconds ago      Up 37 seconds       0.0.0.0:8080->8080/tcp               swp-template_backend-1
+6a7364c0812e        swp-template-frontend     "docker-entrypoint.s…"   39 seconds ago      Up 33 seconds       0.0.0.0:3000->3000/tcp               swp-template_frontend-1
+b176b18fbec4        mysql:8.0.36-debian       "docker-entrypoint.s…"   39 seconds ago      Up 37 seconds       0.0.0.0:3306->3306/tcp, 33060/tcp    swp-template_db-1
 ```
 
 
