@@ -16,9 +16,9 @@ Cấu trúc project
 └── README.md
 ```
 
-## Đăng nhập Github bằng GH CLI
+## Tải project bằng Github CLI
 
-Tải về [GH CLI](https://cli.github.com/)
+Tải về và cài đặt [Github CLI](https://cli.github.com/)
 
 Mở cmd và chạy lệnh
 ```
@@ -41,7 +41,7 @@ gh repo clone dangph12/swp-template
 
 ## Chạy project bằng Docker
 
-Tải về [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+Tải về và cài đặt [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 Đứng từ folder chứa file [_compose.yaml_](compose.yaml), mở cmd và chạy lệnh bên dưới
 
@@ -61,7 +61,7 @@ Hướng dẫn copy và dán lệnh trong cmd bằng Crtl-C/Crtl-V xem tại [Ph
 
 > ℹ️ **_CHÚ Ý_**
 >
-> Mỗi lần có code mới cũng chạy lại lệnh này để update code trong các container
+> Mỗi lần có code mới cũng chạy lại lệnh trên để update code trong các container
 > 
 > Docker sẽ mở cổng 3000, 8080, 3306 từ các container đến các cổng tương đương trên máy host
 > 
@@ -84,7 +84,7 @@ b176b18fbec4        mysql:8.0.36-debian       "docker-entrypoint.s…"   39 seco
 ```
 
 
-## Kiểm tra các cổng
+## Kiểm tra các cổng kết nối
 
 Sau khi app chạy, kiểm tra url `http://localhost:3000` trên browser
 ![page](./tutorials/output.jpg)
