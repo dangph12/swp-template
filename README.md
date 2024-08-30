@@ -33,7 +33,7 @@ Creating swp-template-db-1       ... done
 Creating swp-template-backend-1  ... done
 ```
 
-Hướng dẫn cách điều hướng đến thư mục trên Windows xem tại Phụ lục 1.
+Hướng dẫn cách điều hướng đến thư mục trên Windows xem tại [Phụ lục 1](#1-phụ-lục-1).
 
 Hướng dẫn copy và dán lệnh trong cmd bằng Crtl-C + Crtl-V xem tại Phụ lục 2.
 
