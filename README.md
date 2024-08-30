@@ -36,14 +36,14 @@ Cmd sẽ hiện ra mã xác thực, nhấn Enter để mở browser và nhập m
 
 Tải project bằng GH CLI bằng cách chạy lệnh
 ```
-gh repo clone dangph12/swp-template
+gh repo clone dangph12/swp-template -- --depth=1
 ```
 
 ## Chạy project bằng Docker
 
 Tải về và cài đặt [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
-Đứng từ folder chứa file [_compose.yaml_](compose.yaml), mở cmd và chạy lệnh bên dưới
+Đứng từ folder chứa file [_compose.yaml_](compose.yaml), mở cmd và chạy lệnh
 
 ```
 $ docker compose up -d --build
@@ -71,7 +71,7 @@ Hướng dẫn copy và dán lệnh trong cmd bằng Crtl-C/Crtl-V xem tại [Ph
 
 Danh sách các container sau khi chạy
 
-Mở cmd và chạy lệnh bên dưới
+Sử dụng Docker Desktop để kiểm tra hoặc sử dụng cmd 
 ```
 $ docker ps
 ```
