@@ -16,11 +16,11 @@ Cấu trúc project
 └── README.md
 ```
 
-## Clone project bằng GH CLI
+## Đăng nhập Github bằng GH CLI
 
 Tải về [GH CLI](https://cli.github.com/)
 
-Mở cmd và chạy lệnh bên dưới
+Mở cmd và chạy lệnh
 ```
 gh auth login
 ```
@@ -33,6 +33,11 @@ Phần credentials, chọn `Yes`
 Phần authenticate, chọn `Login with a browser`
 
 Cmd sẽ hiện ra mã xác thực, nhấn Enter để mở browser và nhập mã.
+
+Tải project bằng GH CLI bằng cách chạy lệnh
+```
+gh repo clone dangph12/swp-template
+```
 
 ## Chạy project bằng Docker
 
@@ -52,7 +57,7 @@ Creating swp-template-backend-1  ... done
 
 Hướng dẫn cách điều hướng nhanh đến thư mục trên Windows xem tại [Phụ lục 1](#1-phụ-lục-1).
 
-Hướng dẫn copy và dán lệnh trong cmd bằng Crtl-C + Crtl-V xem tại [Phụ lục 2](#2-phụ-lục-2).
+Hướng dẫn copy và dán lệnh trong cmd bằng Crtl-C/Crtl-V xem tại [Phụ lục 2](#2-phụ-lục-2).
 
 > ℹ️ **_CHÚ Ý_**
 >
