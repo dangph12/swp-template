@@ -1,7 +1,7 @@
-## Compose sample application
-### React application with a Spring backend and a MySQL database
+## Mẫu project cho môn SWP391
+### Web app sử dụng React, Spring Boot và MySQL
 
-Project structure:
+Cấu trúc project
 ```
 .
 ├── backend
@@ -15,52 +15,37 @@ Project structure:
 │   └── Dockerfile
 └── README.md
 ```
+> ℹ️ **_CHÚ Ý_**
+> 
+> Docker sẽ mở cổng 3000, 8080, 3306 từ các container đến các cổng tương đương trên máy host
+> 
+> Hãy đảm bảo các cổng 3000, 8080, 3306 trên máy host không được sử dụng
 
-[_compose.yaml_](compose.yaml)
-```
-services:
-  backend:
-    build: backend
-    ...
-  db:
-    # We use a mariadb image which supports both amd64 & arm64 architecture
-    image: mariadb:10.6.4-focal
-    # If you really want to use MySQL, uncomment the following line
-    #image: mysql:8.0.27
-    ...
-  frontend:
-    build: frontend
-    ports:
-    - 3000:3000
-    ...
-```
-The compose file defines an application with three services `frontend`, `backend` and `db`.
-When deploying the application, docker compose maps port 3000 of the frontend service container to port 3000 of the host as specified in the file.
-Make sure port 3000 on the host is not already being in use.
+## Chạy docker compose
 
-> ℹ️ **_INFO_**
-> For compatibility purpose between `AMD64` and `ARM64` architecture, we use a MariaDB as database instead of MySQL.
-> You still can use the MySQL image by uncommenting the following line in the Compose file
-> `#image: mysql:8.0.27`
-
-## Deploy with docker compose
+Đứng từ folder chứa file [_compose.yaml_](compose.yaml), mở cmd và chạy lệnh bên dưới
 
 ```
-$ docker compose up -d
-Creating network "react-java-mysql-default" with the default driver
-Building backend
-Step 1/17 : FROM maven:3.6.3-jdk-11 AS builder
+$ docker compose up -d --build
 ...
-Successfully tagged react-java-mysql_frontend:latest
-WARNING: Image for service frontend was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
-Creating react-java-mysql-frontend-1 ... done
-Creating react-java-mysql-db-1       ... done
-Creating react-java-mysql-backend-1  ... done
+Creating swp-template-frontend-1 ... done
+Creating swp-template-db-1       ... done
+Creating swp-template-backend-1  ... done
 ```
 
-## Expected result
+Hướng dẫn cách điều hướng đến thư mục trên Windows xem tại Phụ lục 1.
 
-Listing containers must show three containers running and the port mapping as below:
+Hướng dẫn copy và dán lệnh trong cmd bằng Crtl-C + Crtl-V xem tại Phụ lục 2.
+
+> ℹ️ **_CHÚ Ý_**
+> 
+> Mỗi lần có code mới cũng chạy lại lệnh này để update code trong các container
+
+## Kết quả mong muốn
+
+Danh sách các container sau khi chạy
+
+Mở cmd và chạy lệnh bên dưới
 ```
 $ docker ps
 ONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                  NAMES
@@ -69,17 +54,32 @@ a63dee74d79e        react-java-mysql-backend    "java -Djava.securit…"   39 se
 b176b18fbec4        mysql:8.0.19                "docker-entrypoint.s…"   39 seconds ago      Up 37 seconds       3306/tcp, 33060/tcp    react-java-mysql_db-1
 ```
 
-After the application starts, navigate to `http://localhost:3000` in your web browser to get a colorful message.
+
+## Kiểm tra các cổng
+
+Sau khi app chạy, kiểm tra url `http://localhost:3000` trên browser
 ![page](./tutorials/output.jpg)
 
-Stop and remove the containers
+Kiểm tra url `http://localhost:8080` trên browser
+
+Kiểm tra cổng 3306 của MySQL bằng MySQL Workbench
+
+Dừng và xoá các containers
+
+Đứng từ folder chứa file [_compose.yaml_](compose.yaml), mở cmd và chạy lệnh bên dưới
+
+Hướng dẫn cách điều hướng đến thư mục trên Windows xem tại Phụ lục 1.
 ```
 $ docker compose down
-Stopping react-java-mysql-backend-1  ... done
-Stopping react-java-mysql-frontend-1 ... done
-Stopping react-java-mysql-db-1       ... done
-Removing react-java-mysql-backend-1  ... done
-Removing react-java-mysql-frontend-1 ... done
-Removing react-java-mysql-db-1       ... done
-Removing network react-java-mysql-default
+Stopping swp-template-backend-1  ... done
+Stopping swp-template-frontend-1 ... done
+Stopping swp-template-db-1       ... done
+Removing swp-template-backend-1  ... done
+Removing swp-template-frontend-1 ... done
+Removing swp-template-db-1       ... done
+Removing network swp-template-default
 ```
+
+## Phụ lục
+### 1. Phụ lục 1
+### 2. Phụ lục 2
