@@ -93,7 +93,7 @@ Sau khi app chạy, kiểm tra url `http://localhost:3000` trên browser
 
 Kiểm tra cổng 3306 của MySQL bằng MySQL Workbench với tài khoản `root` và mật khẩu trong [file password.txt](db/password.txt)
 
-// Ảnh
+![page](./tutorials/database.jpg)
 
 ## Huỷ các container bằng Docker
 
@@ -117,12 +117,12 @@ Removing network swp-template-default
 ### 1. Phụ lục 1
 Dùng File Explorer mở đến thư mục muốn chạy cmd, ghi từ `cmd` trên thanh địa chỉ và nhấn Enter.
 
-// Ảnh
+![page](./tutorials/explorer.jpg)
 
 ### 2. Phụ lục 2
 Mở cmd, chuột phải vào dòng chữ `cmd.exe` trên cửa sổ, chọn `Properties`
 
 Config theo ảnh dưới
 
-// Ảnh
+![page](./tutorials/cmd.jpg)
 
