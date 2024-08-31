@@ -61,6 +61,8 @@ Hướng dẫn cách điều hướng nhanh đến thư mục trên Windows xem 
 
 Hướng dẫn copy và dán lệnh trong cmd bằng Crtl-C/Crtl-V xem tại [Phụ lục 2](#2-phụ-lục-2).
 
+Hướng dẫn sửa code trực tiếp trên container từ máy host xem tại [Phụ lục 3](#3-phụ-lục-3).
+
 > ℹ️ **_CHÚ Ý_**
 >
 > Mỗi lần có code mới cũng chạy lại lệnh trên để update code trong các container
@@ -125,4 +127,32 @@ Mở cmd, chuột phải vào dòng chữ `cmd.exe` trên cửa sổ, chọn `Pr
 Config theo ảnh dưới
 
 ![page](./tutorials/cmd.jpg)
+
+### 3. Phụ lục 3
+
+> ℹ️ **_CHÚ Ý_**
+>
+> Việc sửa code trực tiếp trên container từ máy host không được khuyến khích
+>
+> Việc này chỉ có thể thực hiện dành cho folder [frontend/src](frontend/src)
+
+Mở [Visual Studio Code](https://code.visualstudio.com/), cài extension [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+
+Bấm phím `F1`, tìm `Dev Containers: Open Folder in Container`
+
+![page](./tutorials/vs.jpg)
+
+Chọn folder [frontend/src](frontend/src)
+
+Chọn option `Add configuration to user data store`
+
+![page](./tutorials/vs2.jpg)
+
+Sau đó cứ nhấn Enter và chờ đợi.
+
+Kết quả có được
+
+![page](./tutorials/vs3.jpg)
+
+
 
